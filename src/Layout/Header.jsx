@@ -1,6 +1,13 @@
 import logo from "./images.jpg";
 
-function MainHeader() {
+const subHeaderStyle = {
+  backgroundColor: "lightgray",
+  color: "blueviolet",
+  minHeight: "1em",
+  margin: "0.5em 0"
+};
+
+const MainHeader=()=> {
   return (
     <div className="pt-0 pl-2 bg-black">
       <img src={logo} className="align-center" style={{ height: "50px" }}></img>
@@ -9,19 +16,15 @@ function MainHeader() {
   );
 }
 
-const subHeaderStyle = {
-  backgroundColor: "lightgray",
-  color: "blueviolet",
-};
-
-function SubHeader() {
-  return <p style={subHeaderStyle}>Hi All </p>;
+const SubHeader=()=> {
+  return <p style={subHeaderStyle}>{" "}</p>;
 }
-export default function Header() {
+const Header=()=> {
   return (
     <div>
-      <MainHeader> </MainHeader>
-      <SubHeader> </SubHeader>
+      <MainHeader /> 
+      <SubHeader />
     </div>
   );
 }
+export default Header;

@@ -1,6 +1,7 @@
-import Student from "./Student";
 import { faker } from "@faker-js/faker";
-import StudentReview from "./StudentReview";
+import Student from "./Components/Student/Student";
+import StudentReview from "./Components/Student/StudentReview";
+
 export default function MainBody() {
   const New = "APP IDAN";
   return (
@@ -30,6 +31,11 @@ export default function MainBody() {
         >
           <StudentReview />
         </Student>
+        <Student
+          fullName="Example New"
+          programmingTime={4}
+          headshot={faker.image.avatar()}
+        />
       </div>
     </div>
   );
